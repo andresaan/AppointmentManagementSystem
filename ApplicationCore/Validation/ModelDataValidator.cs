@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ApplicationCore.Validation
+{
+    public class ModelDataValidator
+    {
+        public string Validate(object model)
+        {
+            var errorMessage = "";
+            var results = new List<ValidationResult>();
+
+            ValidationContext context = new ValidationContext(model);
+            var isValid = Validator.TryValidateObject(model, context, results, validateAllProperties: true);
+            if (!isValid)
+            {
+                foreach (var item in results)
+                {
+                    errorMessage += item.ErrorMessage + "\n";
+                }
+
+                return errorMessage;
+            }
+
+            return null;
+        }
+    }
+}

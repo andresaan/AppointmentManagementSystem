@@ -1,0 +1,2 @@
+C:\Users\aasan\OneDrive\Desktop\DEV\AppointmentManagementSystem\Application\obj\Debug\Application.csproj.AssemblyReference.cache
+C:\Users\aasan\OneDrive\Desktop\DEV\AppointmentManagementSystem\Application\obj\Debug\Application.csproj.CoreCompileInputs.cache
